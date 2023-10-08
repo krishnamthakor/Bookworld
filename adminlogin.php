@@ -6,8 +6,6 @@ if ($_SESSION['alogin'] != '') {
     $_SESSION['alogin'] = '';
 }
 if (isset($_POST['login'])) {
-
-    
     $username = $_POST['username'];
     $password = md5($_POST['password']);
     $sql = "SELECT UserName,Password FROM admin WHERE UserName=:username and Password=:password";

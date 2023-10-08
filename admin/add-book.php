@@ -90,9 +90,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                 <div class="row pad-botm">
                     <div class="col-md-12">
                         <h4 class="header-line">Add Book</h4>
-
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -126,7 +124,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 $cnt = 1;
                                                 if ($query->rowCount() > 0) {
                                                     foreach ($results as $result) { ?>
-                                                        <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->CategoryName); ?></option>
+                                                        <option value="<?php echo htmlentities($result->id); ?>">
+                                                            <?php echo htmlentities($result->CategoryName); ?>
+                                                        </option>
                                                     <?php }
                                                 } ?>
                                             </select>
@@ -147,7 +147,9 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 $cnt = 1;
                                                 if ($query->rowCount() > 0) {
                                                     foreach ($results as $result) { ?>
-                                                        <option value="<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->AuthorName); ?></option>
+                                                        <option value="<?php echo htmlentities($result->id); ?>">
+                                                            <?php echo htmlentities($result->AuthorName); ?>
+                                                        </option>
                                                     <?php }
                                                 } ?>
                                             </select>

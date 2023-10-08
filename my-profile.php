@@ -123,8 +123,8 @@ if (strlen($_SESSION['login']) == 0) {
                                             <div class="form-group">
                                                 <label>Enter Email</label>
                                                 <input class="form-control" type="email" name="email" id="emailid"
-                                                    value="<?php echo htmlentities($result->EmailId); ?>" autocomplete="off" required
-                                                    readonly />
+                                                    value="<?php echo htmlentities($result->EmailId); ?>" autocomplete="off"
+                                                    required readonly />
                                             </div>
                                         <?php }
                                     } ?>

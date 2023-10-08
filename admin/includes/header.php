@@ -1,16 +1,20 @@
-<div class="navbar navbar-inverse set-radius-zero">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- <a class="navbar-brand">
+<div class="navbar navbar-inverse set-radius-zero"
+    style="text-align:center; display: flex; justify-content: center; align-items: center; align-content: center; background-color:#f7f7f7;">
+    <!-- <div class="container" style="text-align: center"> -->
+    <!-- <div class="navbar-header">
+            <a class="navbar-brand">
                 <img src="assets/img/logo.png" />
-            </a> -->
-        </div>
-    </div>
+            </a>
+        </div> -->
+    <h3 class=""><a><img src="assets/img/logonav.png"
+                style="height:10rem; width:13rem; border-radius:4%; margin:0px;" /></a><br />
+        <p
+            style="padding-top:10px; margin:0px 0px 0px 0px; font-weight: bolder; font-size: 25px; font-family: cursive;">
+        <p style="font-family: cursive; font-size:15px; margin:10px 0px 0px 0px;">Where Knowledge and Imagination Unite
+        </p>
+        </p>
+    </h3>
+    <!-- </div> -->
 </div>
 <section class="menu-section">
     <div class="container">

@@ -28,7 +28,7 @@ if (isset($_POST['signup'])) {
     $query->execute();
     $lastInsertId = $dbh->lastInsertId();
     if ($lastInsertId) {
-        echo '<script>alert("Your Registration successfull and your student id is  "+"' . $StudentId . '")</script>';
+        echo '<script>alert("Your Registration successful and your student id is  "+"' . $StudentId . '")</script>';
     } else {
         echo "<script>alert('Something went wrong. Please try again');</script>";
     }
@@ -81,7 +81,6 @@ if (isset($_POST['signup'])) {
             });
         }
     </script>
-
 </head>
 
 <body>
@@ -93,12 +92,9 @@ if (isset($_POST['signup'])) {
             <div class="row pad-botm">
                 <div class="col-md-12">
                     <h4 class="header-line">User Signup</h4>
-
                 </div>
-
             </div>
             <div class="row">
-
                 <div class="col-md-9 col-md-offset-1">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
@@ -108,39 +104,32 @@ if (isset($_POST['signup'])) {
                             <form name="signup" method="post" onSubmit="return valid();">
                                 <div class="form-group">
                                     <label>Enter Full Name</label>
-                                    <input class="form-control" type="text" name="fullanme" autocomplete="off"
+                                    <input class="form-control" type="text" name="fullanme" autocomplete="on"
                                         required />
                                 </div>
-
-
                                 <div class="form-group">
                                     <label>Mobile Number :</label>
                                     <input class="form-control" type="text" name="mobileno" maxlength="10"
-                                        autocomplete="off" required />
+                                        autocomplete="on" required />
                                 </div>
-
                                 <div class="form-group">
                                     <label>Enter Email</label>
                                     <input class="form-control" type="email" name="email" id="emailid"
-                                        onBlur="checkAvailability()" autocomplete="off" required />
+                                        onBlur="checkAvailability()" autocomplete="on" required />
                                     <span id="user-availability-status" style="font-size:12px;"></span>
                                 </div>
-
                                 <div class="form-group">
                                     <label>Enter Password</label>
-                                    <input class="form-control" type="password" name="password" autocomplete="off"
-                                        required />
+                                    <input class="form-control" type="password" name="password" autocomplete="on"
+                                        required minlength="8" />
                                 </div>
-
                                 <div class="form-group">
                                     <label>Confirm Password </label>
-                                    <input class="form-control" type="password" name="confirmpassword"
-                                        autocomplete="off" required />
+                                    <input class="form-control" type="password" name="confirmpassword" autocomplete="on"
+                                        required minlength="8" />
                                 </div>
-
                                 <button type="submit" name="signup" class="btn btn-danger" id="submit">Register Now
                                 </button>
-
                             </form>
                         </div>
                     </div>
