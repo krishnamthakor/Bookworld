@@ -10,8 +10,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         $studentid = strtoupper($_POST['studentid']);
         $bookid = $_POST['bookid'];
         $isissued = 1;
-        $sql = "INSERT INTO  tblissuedbookdetails(StudentID,BookId) VALUES(:studentid,:bookid);
-update tblbooks set isIssued=:isissued where id=:bookid;";
+        $sql = "INSERT INTO  tblissuedbookdetails(StudentID,BookId) VALUES(:studentid,:bookid); update tblbooks set isIssued=:isissued where id=:bookid;";
         $query = $dbh->prepare($sql);
         $query->bindParam(':studentid', $studentid, PDO::PARAM_STR);
         $query->bindParam(':bookid', $bookid, PDO::PARAM_STR);
@@ -97,7 +96,6 @@ update tblbooks set isIssued=:isissued where id=:bookid;";
                         <h4 class="header-line">Issue a New Book</h4>
 
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col-md-10 col-sm-6 col-xs-12 col-md-offset-1">
@@ -109,7 +107,7 @@ update tblbooks set isIssued=:isissued where id=:bookid;";
                                 <form role="form" method="post">
 
                                     <div class="form-group">
-                                        <label>Srtudent id<span style="color:red;">*</span></label>
+                                        <label>Student id<span style="color:red;">*</span></label>
                                         <input class="form-control" type="text" name="studentid" id="studentid"
                                             onBlur="getstudent()" autocomplete="off" required />
                                     </div>
@@ -117,10 +115,6 @@ update tblbooks set isIssued=:isissued where id=:bookid;";
                                     <div class="form-group">
                                         <span id="get_student_name" style="font-size:16px;"></span>
                                     </div>
-
-
-
-
 
                                     <div class="form-group">
                                         <label>ISBN Number or Book Title<span style="color:red;">*</span></label>

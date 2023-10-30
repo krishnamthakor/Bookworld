@@ -49,14 +49,14 @@ header('location:manage-issued-books.php');
 <script>
 // function for get student name
 function getstudent() {
-$("#loaderIcon").show();
-jQuery.ajax({
-url: "get_student.php",
-data:'studentid='+$("#studentid").val(),
-type: "POST",
-success:function(data){
-$("#get_student_name").html(data);
-$("#loaderIcon").hide();
+    $("#loaderIcon").show();
+        jQuery.ajax({
+    url: "get_student.php",
+    data:'studentid='+$("#studentid").val(),
+    type: "POST",
+    success:function(data){
+    $("#get_student_name").html(data);
+    $("#loaderIcon").hide();
 },
 error:function (){}
 });

@@ -42,7 +42,7 @@ if (strlen($_SESSION['alogin']) == 0) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Online Library Management System | Student History</title>
+        <title>Book World | Student History</title>
         <!-- BOOTSTRAP CORE STYLE  -->
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <!-- FONT AWESOME STYLE  -->
@@ -91,7 +91,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                 <th>Issued Book </th>
                                                 <th>Issued Date</th>
                                                 <th>Returned Date</th>
-                                                <th>Fine (if any)</th>
+                                                <!-- <th>Fine (if any)</th> -->
 
                                             </tr>
                                         </thead>
@@ -128,14 +128,14 @@ if (strlen($_SESSION['alogin']) == 0) {
                                                                 echo htmlentities($result->ReturnDate);
                                                             endif; ?>
                                                         </td>
-                                                        <td class="center">
+                                                        <!-- <td class="center">
                                                             <?php if ($result->ReturnDate == ''):
                                                                 echo "Not returned yet";
                                                             else:
                                                                 echo $result->fine;
                                                             endif;
                                                             ?>
-                                                        </td>
+                                                        </td> -->
 
 
                                                     </tr>
